@@ -14,13 +14,13 @@ Cliccate la sezione sottolineata e svolgete tutti i passaggi per la creazione de
 password = 'password da genereare https://myaccount.google.com/security?rapt=AEjHL4MbGEoWlakBM55Kv8XTcOfZgPpiF0sn6LbXOMjRPYj9pFnk5933vhH9gJGVxa0BcDmwzu1WkRwGq5kwX7oUVX-KqCwEbg' 
 context = ssl.create_default_context()
 ```
-- Modificate il file contacts.json sostituendo *recieverEmail* con l'mail del destinatario:
+- Modificate il file contacts.json sostituendo *recieverEmail* con la mail del destinatario:
 ```json
 [
     {"Mail": "recieverEmail", "Attached": "ciao.jpg", "nome": "Aurora",  "numero": "33333333"}
 ]
 ```
-- Modificate il file format.json sostituendo *senderEmail* con l'mail del mittente:
+- Modificate il file format.json sostituendo *senderEmail* con la mail del mittente:
 ```json
 {
     "From":"senderEmail",
@@ -35,14 +35,14 @@ Il funzionamento dello script si basa sui file *contact.json* e *format.json*. I
 In questo file vengono racchiuse le informazioni principali del messaggio:
 - **Mail**: email del mittente che vuole mandare i messaggi;
 - **Subject**: oggetto del messaggio;nome dell'allegato da inviare insieme al messaggio (il file deve essere inserito nella cartella Attached);
-- **Message**: messaggio testuale dell'mail con eventuali *tag*. 
+- **Message**: messaggio testuale della mail con eventuali *tag*. 
 Per inserire dei *tag* nel testo del messaggio si utilizza la seguente sintassi:
 ```
 /*< nomeTag >*/
 ```
 I tag servono per sostituirli con del testo che deve essere diverso per ogni destinatario (ex: nome del destinatario). Il valore dei tag deve essere specificato nel file *contats.json*.
 ### Contats.json
-In questo file vengono racchiuse le informazioni di ogni destinatario. Il file è organizzato come un array di mail, per ognuna si specifica l'mail del destinatario, l'eventuale allegato che può essere omesso (L'allegato va inserito nella cartella *Attached*) e tutti i nomi dei tag che sono stati inseriti nel messaggio in format.json con il loro relativo valore. 
+In questo file vengono racchiuse le informazioni di ogni destinatario. Il file è organizzato come un array di mail, per ognuna si specifica la mail del destinatario, l'eventuale allegato che può essere omesso (L'allegato va inserito nella cartella *Attached*) e tutti i nomi dei tag che sono stati inseriti nel messaggio in format.json con il loro relativo valore. 
 Per esempio:
 ```json
 [
@@ -50,6 +50,6 @@ Per esempio:
 ]
 ```
 Questo specifica un mail da inviare a mario.rossi@gmail.com, con l'allegato ciao.jpg. I tag `/*<nome>*/` e `/*<numero>*/` presenti nel messaggio verranno sostituiti con Mario e 33333333. Il campo *Attached* è l'unico facoltativo, infatti si possono inviare mail prive di allegati.
-**Ricorda**: se dovessi specificare dei tag all'interno del messaggio, sei obbligato a specificare il valore del tag per ogni destinatario altrimenti l'mail non verrà inviata.
+**Ricorda**: se dovessi specificare dei tag all'interno del messaggio, sei obbligato a specificare il valore del tag per ogni destinatario altrimenti la mail non verrà inviata.
 ## Allegati
 Questo script può inviare allegati, ipoteticamente si possono mandare qualsiasi tipologia di file (come da esempio). Non ho potuto testare l'invio di file troppo pesanti, cosa che potrebbe generare errori. Consiglio in questo caso di inviare a se stessi una mail di prova.
