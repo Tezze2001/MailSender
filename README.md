@@ -1,26 +1,26 @@
 # Mail sender
 Questo è uno script che permette di fare la stampa unione con la mail di google.
-Questo script è stato riealizzato per un contest.
+Questo script è stato realizzato per un contest.
 
 ## Prima esecuzione
-Per eseguire questo script bisogna svolgere alcuni passaggi. 
-Create una password per app esterne che permette allo script di collegarsi all'account del mittente ([link](https://myaccount.google.com/security?rapt=AEjHL4MbGEoWlakBM55Kv8XTcOfZgPpiF0sn6LbXOMjRPYj9pFnk5933vhH9gJGVxa0BcDmwzu1WkRwGq5kwX7oUVX-KqCwEbg)).
+Per eseguire questo script bisogna svolgere tutti questi passaggi:
+- Create una password per app esterne che permette allo script di collegarsi all'account del mittente ([link](https://myaccount.google.com/security?rapt=AEjHL4MbGEoWlakBM55Kv8XTcOfZgPpiF0sn6LbXOMjRPYj9pFnk5933vhH9gJGVxa0BcDmwzu1WkRwGq5kwX7oUVX-KqCwEbg)).
 Cliccate la sezione sottolineata e svolgete tutti i passaggi per la creazione della password.
 ![Immagine](./docImages/PasswordAccount.jpg)
 
-Copiate la password appena creata nella variabile *password* a riga 59.
+- Copiate la password appena creata nella variabile *password* a riga 59.
 ```python
 # external app password is required to access to the sender account
 password = 'password da genereare https://myaccount.google.com/security?rapt=AEjHL4MbGEoWlakBM55Kv8XTcOfZgPpiF0sn6LbXOMjRPYj9pFnk5933vhH9gJGVxa0BcDmwzu1WkRwGq5kwX7oUVX-KqCwEbg' 
 context = ssl.create_default_context()
 ```
-Modificate il file contacts.json sostituendo *recieverEmail* con l'mail del destinatario:
+- Modificate il file contacts.json sostituendo *recieverEmail* con l'mail del destinatario:
 ```json
 [
     {"Mail": "recieverEmail", "Attached": "ciao.jpg", "nome": "Aurora",  "numero": "33333333"}
 ]
 ```
-Modificate il file format.json sostituendo *senderEmail* con l'mail del mittente:
+- Modificate il file format.json sostituendo *senderEmail* con l'mail del mittente:
 ```json
 {
     "From":"senderEmail",
