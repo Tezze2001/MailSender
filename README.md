@@ -30,7 +30,7 @@ context = ssl.create_default_context()
 ```
 Una volta fatti questi passaggi lo script può eseguito.
 ## Funzionamento dello script
-Il funzionamento dello script si basa sui file *contact.json* e *format.json*. Il primo si occupa di salvare tutte le informazioni sui contatti ai quali inviare le mail, il secondo si occupa di salvare il messaggio base. Ricorda che questi sono file json quindi devono rispettare la sintassi json.
+Il funzionamento dello script si basa sui file *contacts.json* e *format.json*. Il primo si occupa di salvare tutte le informazioni sui contatti ai quali inviare le mail, il secondo si occupa di salvare il messaggio base. Ricorda che questi sono file json quindi devono rispettare la sintassi json.
 ### Format.json
 In questo file vengono racchiuse le informazioni principali del messaggio:
 - **Mail**: email del mittente che vuole mandare i messaggi;
