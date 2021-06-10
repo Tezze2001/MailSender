@@ -33,8 +33,8 @@ Una volta fatti questi passaggi lo script può eseguito.
 Il funzionamento dello script si basa sui file *contacts.json* e *format.json*. Il primo si occupa di salvare tutte le informazioni sui contatti ai quali inviare le mail, il secondo si occupa di salvare il messaggio base. Ricorda che questi sono file json quindi devono rispettare la sintassi json.
 ### Format.json
 In questo file vengono racchiuse le informazioni principali del messaggio:
-- **Mail**: email del mittente che vuole mandare i messaggi;
-- **Subject**: oggetto del messaggio;nome dell'allegato da inviare insieme al messaggio (il file deve essere inserito nella cartella Attached);
+- **Mail**: email del mittente che vuole mandare i messaggi.
+- **Subject**: oggetto del messaggio.
 - **Message**: messaggio testuale della mail con eventuali *tag*. 
 Per inserire dei *tag* nel testo del messaggio si utilizza la seguente sintassi:
 ```
